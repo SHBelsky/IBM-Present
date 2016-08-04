@@ -29,11 +29,13 @@ body {
 .slide h1 {
     font-size: 60px;
     font-weight: bolder;
+    margin: 10px 0;
 }
 
 .slide h2 {
     font-size: 30px;
     font-weight: bold;
+    margin: 10px 0;
 }
 
 .slide .slide-interior {
@@ -112,50 +114,50 @@ h1.title {
     text-align: center;
 }
 
-#step-2 #top-watson img {
+#step-3 #top-watson img {
     display: block;
     height: 200px;
     margin: 0 auto;
     width: 200px;
 }
-#step-2 #heart {
+#step-3 #heart {
     color: red;
     font-size: 100px;
     margin-top: 30px;
     text-align: center;
 }
-#step-2 #bottom-icon-list {
+#step-3 #bottom-icon-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
 }
 
-#step-2 #bottom-icon-list img {
+#step-3 #bottom-icon-list img {
     height: 150px;
     margin: 0 30px;
     width: 150px;
 }
 
-#step-6, #step-10 {
+#step-7, #step-11 {
     font-size: 30px;
     height: 45vh;
     width: 70vw;
 }
 
-#step-6 h1 {
+#step-7 h1 {
     color: #E71D32;
 }
 
-#step-6 h1, #step-10 h1 {
+#step-7 h1, #step-11 h1 {
     font-size: 50px;
 }
 
-#step-6 img, #step-10 img {
+#step-7 img, #step-11 img {
     margin: 0 40px;
 }
 
-#step-6 .formula, #step-10 .formula {
+#step-7 .formula, #step-11 .formula {
     display: flex;
     font-size: 100px;
     height: 200px;
@@ -163,20 +165,20 @@ h1.title {
     line-height: 200px;
 }
 
-#step-6 .formula div, #step-10 .formula div {
+#step-7 .formula div, #step-17 .formula div {
     margin: 0 50px;
 }
 
-#step-7 h1 {
+#step-8 h1 {
     color: #5AA700;
     font-size: 50px;
 }
 
-#step-8 pre {
+#step-9 pre {
     font-size: 25px;
 }
 
-#step-11 iframe {
+#step-12 iframe {
   border: 0;
   height: 90%;
   width: 100%;
