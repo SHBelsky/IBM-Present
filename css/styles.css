@@ -37,33 +37,80 @@ body {
 }
 
 .slide .slide-interior {
-    line-height: 50px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
 /* Titles and Subtitles */
-h1#title {
-    font-size: 100px;
+h1.title {
+    color: #325C80;
+    font-size: 60px;
     margin: 10px 0;
 }
 
 /* Big Blocks */
 .big-block {
-    height: 20vh;
+    height: 40vh;
     width: 50vw;
 }
+
+/* Watson Chat Flow */
+.dialog-flow {
+  width: 100%;
+}
+
+.chat-row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.chat-column-1, .chat-column-3 {
+  width: 15%;
+}
+
+.chat-column-2 {
+  width: 70%;
+}
+
+.chat-row .chat-icon {
+  height: 100%;
+  margin: auto;
+}
+
+.chat-row .chat-icon img {
+  display: block;
+  margin: auto;
+  height: 70px;
+  width: 70px;
+}
+
+.chat-row .chat-icon img.watson-avatar {
+  height: 100px;
+  width: 100px;
+}
+
+.chat-row .chat {
+  border-radius: 25px;
+  color: white;
+  height: 100%;
+  padding: 10px 30px;
+}
+
+.chat-row:nth-of-type(odd) .chat {
+  background-color: #00B4A0;
+}
+
+.chat-row:nth-of-type(even) .chat {
+  background-color: #ba8ff7;
+}
+
+
 
 /* Individual Slide CSS */
 #intro-slide {
     text-align: center;
 }
-
-/*#intro-slide img {*/
-    /*height: 200px;*/
-    /*width: 200px;*/
-/*}*/
 
 #step-2 #top-watson img {
     display: block;
@@ -73,7 +120,7 @@ h1#title {
 }
 #step-2 #heart {
     color: red;
-    font-size: 120px;
+    font-size: 100px;
     margin-top: 30px;
     text-align: center;
 }
@@ -90,25 +137,25 @@ h1#title {
     width: 150px;
 }
 
-#step-3, #step-7 {
+#step-6, #step-10 {
     font-size: 30px;
-    height: 35vh;
+    height: 45vh;
     width: 70vw;
 }
 
-#step-3 h1 {
+#step-6 h1 {
     color: #E71D32;
 }
 
-#step-3 h1, #step-7 h1 {
+#step-6 h1, #step-10 h1 {
     font-size: 50px;
 }
 
-#step-3 img, #step-7 img {
+#step-6 img, #step-10 img {
     margin: 0 40px;
 }
 
-#step-3 .formula, #step-7 .formula {
+#step-6 .formula, #step-10 .formula {
     display: flex;
     font-size: 100px;
     height: 200px;
@@ -116,19 +163,21 @@ h1#title {
     line-height: 200px;
 }
 
-.formula div {
+#step-6 .formula div, #step-10 .formula div {
     margin: 0 50px;
-}
-
-#step-4 h1 {
-    color: #5AA700;
-    font-size: 50px;
-}
-
-#step-5 pre {
-    font-size: 30px;
 }
 
 #step-7 h1 {
     color: #5AA700;
+    font-size: 50px;
+}
+
+#step-8 pre {
+    font-size: 25px;
+}
+
+#step-11 iframe {
+  border: 0;
+  height: 90%;
+  width: 100%;
 }
