@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Shea Belsky - IBM Watson Presentation</title>
+    </head>
+    <body>
+        <div id="impress">
+            <div id="intro-slide" class="step slide" data-x="0" data-y="0">
+                <div class="slide-interior">
+                    <img src="https://cloud.githubusercontent.com/assets/9538395/6629029/dc43e19e-c8d8-11e4-9661-a0ec8e9a266e.gif"><br>
+                    <h1>Shea Hunter Belsky</h1>
+                    <h2>IBM Watson - Watson Engagement Advisor App Squad</h2>
+                    The Future of Watson: Watson Conversation & Chat Bots with Facebook, Slack, and Twilio<br>
+                </div>
+            </div>
+            <div class="step slide" data-x="1500" data-y="0">
+                <div class="slide-interior">
+                    <b>Primary Focus</b>: Bring Watson's Conversation service to the forefront of user experiences by implementing bot capabilities with popular chat clients such as Facebook, Slack, Twilio, and Twitter
+                    <div id="top-watson">
+                        <img src="img/Watson_Avatar.png" class="watson-avatar">
+                    </div>
+                    <div id="heart">
+                        ♡
+                    </div>
+                    <div id="bottom-icon-list">
+                        <img src="img/Facebook_Icon.png" class="facebook-icon" />
+                        <img src="img/Slack_Icon.png" class="slack-icon"/>
+                        <img src="img/Twilio_Icon.png" class="twilio-icon"/>
+                    </div>
+                </div>
+            </div>
+            <div class="big-block step" data-x="0" data-y="2000" data-scale="4">
+                <h1 class="title">PROBLEM</h1>
+                Watson Conversation has the ability to talk with people using its in-built client, but it's difficult to integrate it with other services intuitively.<br>
+                <div class="formula">
+                    <img src="img/Watson_Avatar.png" class="watson-avatar"> + <div style="font-size: 100px;">?</div> = <img src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Messaging_alt.png" class="watson-avatar" />
+                </div>
+                <h3 style="margin-top: 20px; text-align: center">What goes in the middle to make this work?</h3>
+            </div>
+            <div class="big-block step" data-x="0" data-y="4750" data-z="-10" data-rotate-x="-180" data-rotate-y="180" data-scale="4">
+                <h1 class="title">SOLUTION</h1>
+                Botkit: An open source framework for creating and maintaining chat bots and implementing custom logic. Botkit listens for Facebook, Slack, and Twilio messages and connects with Watson Conversation in order to handle all messages between the user and Watson.
+            </div>
+            <div class="slide step" data-x="-6000" data-y="4750" data-z="-10" data-rotate-x="-180" data-rotate-y="180" data-scale="4">
+                <h1 class="title">CODE (NodeJS)</h1>
+                <pre>
+var Botkit    = require('botkit');
+var watson    = require('./lib/index').processor;
+var app       = require('./app').app;
+
+var FB_Controller = Botkit.facebookbot({
+    access_token: process.env.ACCESS_TOKEN,
+    verify_token: process.env.VERIFY_TOKEN
+});
+var FB_Bot = FB_Controller.spawn({});
+FB_Controller.middleware.receive.use(watson.receive);
+FB_Controller.createWebhookEndpoints(app, FB_Bot);
+
+FB_Controller.hears('(.*)', 'message_received',
+    watsonMiddleware.hears, function(bot, message) {
+    // Handle Watson's response here!
+    bot.reply(message);
+});
+                </pre>
+            </div>
+            <div class="slide step" data-x="-12500" data-y="4750" data-z="-10" data-rotate-x="-180" data-rotate-y="180" data-scale="4">
+                <div class="slide-interior">
+                    <h1 class="title">How does it work?</h1>
+                    As a NodeJS module, Botkit will automatically configure the appropriate settings and listeners for our Facebook app. We need to give it some developer credentials and create a webserver for it to run on (or pass it an existing web server). Once configured and started, Botkit will always listen for new messages to a specific Facebook page and handle it.
+                </div>
+            </div>
+            <div class="big-block step" data-x="8000" data-y="2000" data-scale="4">
+                <h1 class="title">THE COMPLETED FORMULA</h1>
+                Watson Conversation plus Botkit allows the developer to easily connect users with Watson through existing clients, instead of needing to develop their own clients and APIs.<br>
+                <div class="formula">
+                    <img src="img/Watson_Avatar.png" class="watson-avatar"> + <div style="font-size: 50px;">Botkit</div> = <img src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Messaging_alt.png" class="watson-avatar" />
+                </div>
+            </div>
+            <div class="step" data-x="0" data-y="2000" data-scale="11">
+                test
+            </div>
+        </div>
+    </body>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+</html>

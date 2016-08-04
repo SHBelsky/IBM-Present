@@ -1,0 +1,134 @@
+html {
+    background: url('http://marketingland.com/wp-content/ml-loads/2016/06/ibm-watson-black-1920.png') no-repeat center center black;
+}
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.watson-avatar {
+    height: 200px;
+    width: 200px;
+}
+/* Slides */
+.slide, .big-block {
+    display: block;
+    width: 900px;
+    height: 70vh;
+    padding: 40px 60px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+.slide h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.slide h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.slide .slide-interior {
+    line-height: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Titles and Subtitles */
+h1#title {
+    font-size: 100px;
+    margin: 10px 0;
+}
+
+/* Big Blocks */
+.big-block {
+    height: 20vh;
+    width: 50vw;
+}
+
+/* Individual Slide CSS */
+#intro-slide {
+    text-align: center;
+}
+
+/*#intro-slide img {*/
+    /*height: 200px;*/
+    /*width: 200px;*/
+/*}*/
+
+#step-2 #top-watson img {
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+    width: 200px;
+}
+#step-2 #heart {
+    color: red;
+    font-size: 120px;
+    margin-top: 30px;
+    text-align: center;
+}
+#step-2 #bottom-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#step-2 #bottom-icon-list img {
+    height: 150px;
+    margin: 0 30px;
+    width: 150px;
+}
+
+#step-3, #step-7 {
+    font-size: 30px;
+    height: 35vh;
+    width: 70vw;
+}
+
+#step-3 h1 {
+    color: #E71D32;
+}
+
+#step-3 h1, #step-7 h1 {
+    font-size: 50px;
+}
+
+#step-3 img, #step-7 img {
+    margin: 0 40px;
+}
+
+#step-3 .formula, #step-7 .formula {
+    display: flex;
+    font-size: 100px;
+    height: 200px;
+    justify-content: center;
+    line-height: 200px;
+}
+
+.formula div {
+    margin: 0 50px;
+}
+
+#step-4 h1 {
+    color: #5AA700;
+    font-size: 50px;
+}
+
+#step-5 pre {
+    font-size: 30px;
+}
+
+#step-7 h1 {
+    color: #5AA700;
+}
